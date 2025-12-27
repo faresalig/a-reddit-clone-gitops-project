@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                git branch: 'main', url: 'https://github.com/Ashfaque-9x/a-reddit-clone.git'
+                git branch: 'main', url: 'https://github.com/faresalig/a-reddit-clone-gitops-project.git'
             }
         }
         stage("Sonarqube Analysis") {
@@ -66,7 +66,7 @@ pipeline {
         stage("Trivy Image Scan") {
                 steps {
                     script {
-                    sh ('docker run -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy image ashfaque9x/reddit-clone-pipeline:latest --no-progress --scanners vuln  --exit-code 0 --severity HIGH,CRITICAL --format table > trivyimage.txt')
+                    sh ('docker run -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy image farespro/reddit-clone-pipeline:latest --no-progress --scanners vuln  --exit-code 0 --severity HIGH,CRITICAL --format table > trivyimage.txt')
                     }
                 }
             }
@@ -93,7 +93,7 @@ pipeline {
                 body: "Project: ${env.JOB_NAME}<br/>" +
                     "Build Number: ${env.BUILD_NUMBER}<br/>" +
                     "URL: ${env.BUILD_URL}<br/>",
-                to: 'ashfaque.s510@gmail.com',                              
+                to: 'fares123456789ali@gmail.com',                              
                 attachmentsPattern: 'trivyfs.txt,trivyimage.txt'
             }
         }
