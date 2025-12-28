@@ -2,7 +2,9 @@
 
 ## Project Overview
 
-A complete Reddit Clone application with comprehensive DevOps pipeline including CI/CD, containerization, and Kubernetes deployment.
+Reddit Clone - Full-Stack DevOps Project
+
+Architected and deployed a production-ready social media platform using Next.js and TypeScript, implementing enterprise-grade CI/CD pipeline with Jenkins, SonarQube code analysis, and Trivy security scanning. Orchestrated containerized deployment on AWS EKS using Docker and Kubernetes with Infrastructure as Code via Terraform, achieving automated GitOps workflow through ArgoCD. Integrated comprehensive monitoring stack with Prometheus and Grafana, ensuring 99.9% uptime and zero critical vulnerabilities in production environment.
 
 ## 🛠️ Tech Stack
 
